@@ -1,0 +1,21 @@
+<div class='weather__card'>
+  <h2 class='city-name'>{{this.name}}</h2>
+  <ul class='weather-info list'>
+    <li class='weather-info-item'>
+      <p class='temp'>Температура: {{this.main.temp}}<sup>&#176;</sup></p>
+    </li>
+    <li class='weather-info-item'>
+      <p class='feels-like-temp'>Відчувається як:
+        {{this.main.feels_like}}<sup>&#176;</sup></p>
+    </li>
+    <li class='weather-info-item'>
+      <p class='sunrise-time'>Схід сонця: {{this.sys.sunrise}}</p>
+    </li>
+    <li class='weather-info-item'>
+      <p class='sunset-time'>Захід сонця: {{this.sys.sunset}}</p>
+    </li>
+    <li class='weather-info-item'>
+      <p class='clouds'>Хмарність: {{this.clouds.all}}%</p>
+    </li>
+  </ul>
+</div>
