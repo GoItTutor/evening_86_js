@@ -42,7 +42,7 @@
 //     } else {
 //       onError("Користувача з таким ім'ям не знайдено");
 //     }
-//   }, 2000);
+//   }, 700);
 // };
 
 // const handleSuccessFetch = data => {
@@ -56,3 +56,32 @@
 // fetchUserByName('Ida', handleSuccessFetch, handleErrorFetch);
 
 //? Запит за користувачем на промісах
+
+const fetchUserByName = name => {
+  console.log('Робимо запит на сервер...');
+
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const isDone = Math.random();
+
+      if (isDone < 0.5) {
+        const user = {
+          firstName: name,
+          lastName: 'Francis',
+          age: 30,
+        };
+
+        resolve(user);
+      } else {
+        reject("Користувача з таким ім'ям не знайдено");
+      }
+    }, 700);
+  });
+};
+
+fetchUserByName('Andrii')
+  .then(user => {
+    console.log(user);
+  })
+  .catch(console.error)
+  .finally(() => console.log(`Function completed!`));

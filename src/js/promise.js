@@ -4,9 +4,45 @@
  * Проміси
  */
 
+// console.log(1);
+
+// const promise = new Promise((resolve, reject) => {
+//   if (Math.random() > 0.5) {
+//     resolve('Success');
+//   } else {
+//     reject('Error');
+//   }
+// });
+
+// console.log(promise);
+
+// console.log(2);
 //? конструктор new Promise(callback(resolve, reject));
 
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (Math.random() > 0.5) {
+      resolve('Success');
+    } else {
+      reject('Error');
+    }
+  }, 250);
+});
+
+// console.log(promise);
+
 //? then(onSuccess, onError)
+
+promise
+  .then(value => {
+    console.log(value);
+  })
+  .catch(err => {
+    console.warn(err);
+  })
+  .finally(() => {
+    console.log('Completed!');
+  });
 
 //? ланцюжок промісів та catch(onError)
 
