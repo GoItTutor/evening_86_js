@@ -41,6 +41,10 @@
   transition: background-color 250ms linear;
 }
 
+.is-hidden {
+  display: none;
+}
+
 .load-more-btn:hover,
 .load-more-btn:focus {
   background-color: #2c3e50;
