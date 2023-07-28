@@ -9,7 +9,17 @@ export const getWeatherDataByCityName = cityName =>
       if (!response.ok) {
         throw new Error(response.status);
       }
-
       return response.json();
     }
   );
+
+// export const getWeatherDataByCityName = cityName =>
+//   fetch(`${BASE_URL}?q=${cityName}&appid=${API_KEY}&lang=ua&units=metric`).then(
+//     response => {
+//       if (!response.ok) {
+//         throw new Error(response.status);
+//       }
+
+//       return response.json();
+//     }
+//   );
