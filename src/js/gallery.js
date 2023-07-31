@@ -18,7 +18,7 @@ const handleSearchFormSubmit = event => {
 
   unsplashApi
     .fetchPhotos()
-    .then(data => {
+    .then(({ data }) => {
       if (!data.results.length) {
         console.log('Images not found!');
         return;
@@ -37,7 +37,7 @@ const handleLoadMoreBtnClick = () => {
 
   unsplashApi
     .fetchPhotos()
-    .then(data => {
+    .then(({ data }) => {
       console.log(data);
       if (unsplashApi.page === data.total_pages) {
         loadMoreBtnEl.classList.add('is-hidden');

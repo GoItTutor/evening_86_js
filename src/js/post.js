@@ -3,7 +3,28 @@
  * Method (POST). Headers ("Content-Type": "application/json"). Body.
  */
 
-const BASE_URL = 'http://localhost:3000';
+// import axios from 'axios';
+
+// const BASE_URL = 'http://localhost:3000';
+
+const obj = {
+  'Content-Type': 'application/json',
+};
+
+// const createUser = newUser =>
+//   fetch(`${BASE_URL}/users`, {
+//     method: 'POST',
+//     body: JSON.stringify(newUser),
+//     headers: { 'Content-Type': 'application/json' },
+//   }).then(response => {
+//     if (!response.ok) {
+//       throw new Error(response.status);
+//     }
+
+//     return response.json();
+//   });
+
+// const createUser = newUser => axios.post(`${BASE_URL}/users`, newUser);
 
 // createUser({
 //   name: 'Warren Soto',
